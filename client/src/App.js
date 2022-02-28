@@ -27,8 +27,7 @@ function App() {
 
   const getEmployee = () => {
     Axios.get('http://localhost:3001/employees').then((response) => {
-      console.log(response)
-
+      setEmployeeList(response.data)      
     });
   }
 
@@ -60,9 +59,10 @@ function App() {
   </div>
   <div className='employees'>
   <button onClick={getEmployee}>Show Employees</button>
-  <div className='employeeData'>
 
-  </div>
+    {employeeList.map((val, key) => {
+      return<div>{val.name}</div>
+    })}
   </div>
   </div>
 }
