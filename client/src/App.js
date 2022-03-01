@@ -59,10 +59,14 @@ function App() {
   </div>
   <div className='employees'>
   <button onClick={getEmployee}>Show Employees</button>
-
     {employeeList.map((val, key) => {
-      return<div>{val.name}</div>
-    })}
+      return<div className='employee'>
+        <p>{val.name}</p>
+        <p>{val.age}</p>
+        <p>{val.country}</p>
+        <p> {val.position}</p>
+        <p>{val.wage}</p>
+        </div>})}
   </div>
   </div>
 }

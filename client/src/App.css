@@ -37,3 +37,16 @@ button:hover{
   flex-direction: column;
   width: 100%;
 }
+
+.employee{
+  display: flex;
+  width: 700px;
+  height: 75px;
+  background-color: lightgrey;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.employee p{
+  width: 100%;
+}
